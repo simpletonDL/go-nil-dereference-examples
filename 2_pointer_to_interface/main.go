@@ -1,25 +1,22 @@
 package main
 
-type MyError struct{}
+import (
+	"fmt"
+	"os"
+)
 
-func (*MyError) Error() string {
-	return "faild"
-}
-
-func bad() error {
-	e := &MyError{}
-	return e
-}
-
-func bad2() *MyError {
-	return &MyError{}
+func validateFile(data []byte) *ValidationError {
+	return nil // lets consider it returns nil
 }
 
 func main() {
-	var err error = bad()
-	if err == nil {
-		print("123")
-	} else {
-		println()
+	file, err := os.ReadFile("input.txt")
+	if err != nil {
+		panic("Error reading file")
 	}
+	err = validateFile(file)
+	if err != nil {
+		panic("Error is not nil! File is not valid")
+	}
+	fmt.Println("File is valid")
 }

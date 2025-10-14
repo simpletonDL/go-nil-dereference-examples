@@ -5,8 +5,6 @@ import (
 	"fmt"
 )
 
-// Spoken: Hidden issue, works well for the most cases and for the most time.
-
 func main() {
 	conf := config.LoadFromFile()
 	if conf == nil {
