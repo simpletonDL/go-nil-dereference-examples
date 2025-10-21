@@ -19,7 +19,7 @@ func NewUser(age int, name string) *User {
 
 func CreateUser(age int, name string) (*User, error) {
 	if !isValidName(name) {
-		return nil, errors.New("Invalid name")
+		return nil, errors.New("invalid name")
 	}
 	if !isValidAge(age) {
 		return nil, nil

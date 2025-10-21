@@ -1,9 +1,0 @@
-{
-  "gopls": {
-    "analyses": {
-      "nilness": true,
-      "SA5011": true,
-    },
-    "staticcheck": true
-  }
-}
