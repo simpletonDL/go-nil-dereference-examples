@@ -22,5 +22,5 @@ For the full context and explanation, see the talk:
 Go 1.21+;
 Run examples directly:
 ```shell
-go run ./examples/01-interface-vs-pointer
+go run 0_default_init/main.go
 ```
